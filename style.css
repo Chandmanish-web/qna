@@ -1,0 +1,345 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header Styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    background-color: #ff6347;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #ff6347;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .hero .cta {
+    background-color: white;
+    color: #ff6347;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .hero .cta:hover {
+    background-color: #ff4500;
+    color: white;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-content p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+  }
+  
+  /* Services Section */
+  .services {
+    padding: 50px 20px;
+    background-color: #fff;
+  }
+  
+  .services h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    flex: 1;
+    min-width: 220px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #ff6347;
+  }
+  
+  .card p {
+    line-height: 1.5;
+  }
+  
+  /* Team Section */
+  .team {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .team h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .member {
+    flex: 1;
+    min-width: 220px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .member h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff6347;
+  }
+  
+  .member p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Testimonials Section */
+  .testimonials {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .testimonial {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial h3 {
+    font-size: 18px;
+    color: #ff6347;
+  }
+  
+  /* FAQs Section */
+  .faq {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .faq h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .faq-item {
+    margin-bottom: 20px;
+  }
+  
+  .faq-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff6347;
+  }
+  
+  .faq-item p {
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 50px 20px;
+    background-color: #fff;
+  }
+  
+  .contact h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form input,
+  form textarea,
+  form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  form button {
+    background-color: #ff6347;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #ff4500;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header nav ul {
+      flex-direction: column;
+    }
+  
+    .service-cards,
+    .team-members,
+    .testimonials-container {
+      flex-direction: column;
+    }
+  
+    .card,
+    .member,
+    .testimonial {
+      margin-bottom: 20px;
+    }
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
