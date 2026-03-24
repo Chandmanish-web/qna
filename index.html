@@ -13,7 +13,7 @@
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#team">Team</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
@@ -21,13 +21,14 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <button id="darkModeToggleBtn" class="header-dark-btn">🌙 Dark Mode</button>
   </header>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content">
       <h1>Welcome to MyWebsite</h1>
-      <p>We provide innovative solutions to help your business grow. Let's work together!</p>
+      <p>We provide innovative solutions to help your business grow. Let’s work together!</p>
       <button class="cta">Get Started</button>
     </div>
   </section>
@@ -36,8 +37,14 @@
   <section id="about" class="about">
     <h2>About Us</h2>
     <div class="about-content">
-      <p>We are a leading agency specializing in web development, graphic design, and digital marketing. Our mission is to deliver excellence to our clients.</p>
-      <p>With years of experience and a team of professionals, we ensure high-quality services tailored to your needs.</p>
+      <div class="about-image">
+        <img src="images/beautiful-happy-young-girl-using-laptop-computer-smiling-looking-towards-camera-outdoors-97285708.webp" alt="Our Team">
+      </div>
+      <div class="about-text">
+        <p>We are a leading agency specializing in web development, graphic design, and digital marketing. Our mission is to deliver excellence to our clients.</p>
+        <p>With years of experience and a team of professionals, we ensure high-quality services tailored to your needs. We believe in innovation, creativity, and building lasting relationships with our clients.</p>
+        <p>Our expertise spans across various domains, allowing us to provide comprehensive solutions that drive results. Whether you're a startup or an established business, we're here to help you succeed in the digital world.</p>
+      </div>
     </div>
   </section>
 
@@ -46,20 +53,24 @@
     <h2>Our Services</h2>
     <div class="service-cards">
       <div class="card">
+        <img src="images/web-development-team.webp" alt="Web Development">
         <h3>Web Development</h3>
-        <p>We build responsive and modern websites tailored to your business requirements.</p>
+        <p>We build responsive and modern websites tailored to your business requirements. Our web development services include custom website design, e-commerce solutions, and mobile-friendly applications.</p>
       </div>
       <div class="card">
+        <img src="images/Best-Website-Designs.jpg" alt="Graphic Design">
         <h3>Graphic Design</h3>
-        <p>Create stunning visuals and branding that resonate with your audience.</p>
+        <p>Create stunning visuals and branding that resonate with your audience. From logos to marketing materials, we deliver creative designs that enhance your brand identity.</p>
       </div>
       <div class="card">
+        <img src="images/clipart-definition-consultant-6.jpg" alt="Digital Marketing">
         <h3>Digital Marketing</h3>
-        <p>Enhance your online presence with targeted and effective marketing strategies.</p>
+        <p>Enhance your online presence with targeted and effective marketing strategies. We offer SEO, social media marketing, content creation, and PPC campaigns to drive traffic and conversions.</p>
       </div>
       <div class="card">
+        <img src="images/OIP.webp" alt="Consulting">
         <h3>Consulting</h3>
-        <p>Expert advice to transform your ideas into actionable plans.</p>
+        <p>Expert advice to transform your ideas into actionable plans. Our consulting services help you navigate digital challenges and implement strategies for sustainable growth.</p>
       </div>
     </div>
   </section>
@@ -69,18 +80,22 @@
     <h2>Meet Our Team</h2>
     <div class="team-members">
       <div class="member">
+        <img src="images/portrait-of-young-female-software-developer-photo.jpg" alt="John Doe">
         <h3>John Doe</h3>
         <p>CEO & Founder</p>
       </div>
       <div class="member">
+        <img src="images/portrait-of-a-man-using-a-computer-in-a-modern-office-picture-id1344688156-1.avif" alt="Jane Smith">
         <h3>Jane Smith</h3>
         <p>Lead Designer</p>
       </div>
       <div class="member">
+        <img src="images/OIP (1).webp" alt="Mike Johnson">
         <h3>Mike Johnson</h3>
         <p>Marketing Specialist</p>
       </div>
       <div class="member">
+        <img src="images/beautiful-happy-young-girl-using-laptop-computer-smiling-looking-towards-camera-outdoors-97285708.webp" alt="Emily Davis">
         <h3>Emily Davis</h3>
         <p>Senior Developer</p>
       </div>
@@ -92,14 +107,17 @@
     <h2>What Our Clients Say</h2>
     <div class="testimonials-container">
       <div class="testimonial">
+        <img src="images/portrait-of-young-female-software-developer-photo.jpg" alt="Alex Brown">
         <p>"The team at MyWebsite exceeded our expectations. Their work is top-notch!"</p>
         <h3>- Alex Brown</h3>
       </div>
       <div class="testimonial">
+        <img src="images/portrait-of-a-man-using-a-computer-in-a-modern-office-picture-id1344688156-1.avif" alt="Sarah Lee">
         <p>"Amazing service and support! I highly recommend their expertise."</p>
         <h3>- Sarah Lee</h3>
       </div>
       <div class="testimonial">
+        <img src="images/OIP (1).webp" alt="David Wilson">
         <p>"Professional, reliable, and creative. They are the best in the business."</p>
         <h3>- David Wilson</h3>
       </div>
@@ -126,6 +144,7 @@
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
+    <div class="contact-image"><img src="images/Best-Website-Designs.jpg" alt="Contact"></div>
     <form>
       <label for="name">Name:</label>
       <input type="text" id="name" placeholder="Your Name">

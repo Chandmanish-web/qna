@@ -43,12 +43,12 @@ document.querySelectorAll('header nav ul li a').forEach(link => {
   
   // Form Validation
   const form = document.querySelector('form');
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
-  
+    
     if (!name || !email || !message) {
       alert('Please fill out all fields.');
       return;
@@ -58,11 +58,24 @@ document.querySelectorAll('header nav ul li a').forEach(link => {
       alert('Please enter a valid email address.');
       return;
     }
-  
-    alert('Form submitted successfully!');
-    form.reset();
-  });
-  
+    
+    try {
+      const response = await fetch('http://localhost:3000/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message })
+      });
+      const data = await response.json();
+      if (response.ok) {
+        alert('Form submitted successfully!');
+        form.reset();
+      } else {
+        alert('Submission failed: ' + data.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Submission failed');
+    }
   // Testimonials Slider with Controls
   let currentSlide = 0;
   const testimonials = document.querySelectorAll('.testimonial');
@@ -176,18 +189,20 @@ document.querySelectorAll('header nav ul li a').forEach(link => {
   lazyImages.forEach(img => observer.observe(img));
   
   // Dark Mode Toggle
-  const darkModeToggle = document.createElement('button');
-  darkModeToggle.textContent = '🌙 Dark Mode';
-  darkModeToggle.style.position = 'fixed';
-  darkModeToggle.style.top = '20px';
-  darkModeToggle.style.right = '20px';
-  darkModeToggle.style.padding = '10px';
-  darkModeToggle.style.background = '#444';
-  darkModeToggle.style.color = 'white';
-  darkModeToggle.style.border = 'none';
-  darkModeToggle.style.borderRadius = '5px';
-  darkModeToggle.style.cursor = 'pointer';
-  document.body.appendChild(darkModeToggle);
+  const darkModeToggle = document.querySelector('#darkModeToggleBtn') || document.createElement('button');
+  if (!document.querySelector('#darkModeToggleBtn')) {
+    darkModeToggle.textContent = '🌙 Dark Mode';
+    darkModeToggle.style.position = 'fixed';
+    darkModeToggle.style.top = '20px';
+    darkModeToggle.style.right = '20px';
+    darkModeToggle.style.padding = '10px';
+    darkModeToggle.style.background = '#444';
+    darkModeToggle.style.color = 'white';
+    darkModeToggle.style.border = 'none';
+    darkModeToggle.style.borderRadius = '5px';
+    darkModeToggle.style.cursor = 'pointer';
+    document.body.appendChild(darkModeToggle);
+  }
   
   darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
@@ -195,5 +210,5 @@ document.querySelectorAll('header nav ul li a').forEach(link => {
       darkModeToggle.textContent = '☀ Light Mode';
     } else {
       darkModeToggle.textContent = '🌙 Dark Mode';
-    }
-  });
+    }
+  });
